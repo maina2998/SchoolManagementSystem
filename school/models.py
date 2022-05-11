@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+
+
 # Create your models here.
 
 
@@ -8,6 +10,8 @@ class TeacherExtra(models.Model):
     salary = models.PositiveIntegerField(null=False)
     joindate=models.DateField(auto_now_add=True)
     mobile = models.CharField(max_length=40)
+    status=models.BooleanField(default=False)
+
     status=models.BooleanField(default=False)
     def __str__(self):
         return self.user.first_name
